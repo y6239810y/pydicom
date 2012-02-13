@@ -1,0 +1,19 @@
+Test of pydicom clone for slicer. http://code.google.com/p/pydicom/  
+
+Since pydicom itself is hosted in hg, it is
+not possible to fork it directly.
+
+Instead, this git repository includes a read-only hg checkout
+(in the .hg directory).  This means that anyone who checks out 
+this clone can updated it using hg commands and then (in needed) 
+push the new code back into the git repository.
+
+Created with:
+
+ hg clone https://code.google.com/p/pydicom/
+ cd pydicom/
+ git init
+ git commit -m "Initial commit, including hg checkout"
+ git remote add origin git@github.com:pieper/pydicom.git
+ git push -u origin master
+
